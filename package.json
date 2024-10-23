@@ -1,0 +1,19 @@
+{
+  "name": "com.k.ui",
+  "displayName": "k.UI",
+  "version": "0.0.1",
+  "unity": "6000",
+  "author": {
+    "name": "k0fe"
+  },
+  "hideInEditor": false,
+  "description": "Simple UI handler",
+  "keywords": [
+    "UI",
+  ],
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xk0fe/k.ui"
+  }
+}
