@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Packaged.k.UI.Configs
 {
-    [CreateAssetMenu(menuName = "k.UI/" + nameof(UiConfig), fileName = nameof(UiConfig), order = 0)]
+    [CreateAssetMenu(menuName = "k/UI/" + nameof(UiConfig), fileName = nameof(UiConfig), order = 0)]
     public class UiConfig : ScriptableObject
     {
         [SerializeField] private Canvas _canvas;
