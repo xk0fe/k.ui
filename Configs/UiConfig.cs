@@ -12,5 +12,10 @@ namespace Packaged.k.UI.Configs
 
         public Canvas Canvas => _canvas;
         public List<ViewBase> ViewBases => _viewBases;
+
+        public void SetViews(List<ViewBase> views)
+        {
+            _viewBases = views;
+        }
     }
 }
