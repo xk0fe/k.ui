@@ -66,12 +66,12 @@ namespace Packaged.k.UI
         public T SetActiveView<T>(string viewName, bool isActive, ViewModelBase model) where T : ViewBase
         {
             if (!TryGetOrCreate(viewName, out var view)) return null;
-            if (isActive == view.IsActive) return null;
-            view.SetActive(isActive);
             if (model != null)
             {
                 view.OnViewModelUpdate(model);
             }
+            if (isActive == view.IsActive) return null;
+            view.SetActive(isActive);
 
             return (T)view;
         }
