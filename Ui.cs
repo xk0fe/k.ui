@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using Packaged.k.UI.Configs;
-using Packaged.k.UI.Enums;
-using Packaged.k.UI.Models;
-using Packaged.k.UI.Views;
+using k.UI.Configs;
+using k.UI.Enums;
+using k.UI.Models;
+using k.UI.Views;
 using UnityEngine;
 
-namespace Packaged.k.UI
+namespace k.UI
 {
     public class Ui
     {

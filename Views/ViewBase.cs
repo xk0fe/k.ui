@@ -1,8 +1,8 @@
-﻿using Packaged.k.UI.Animations;
-using Packaged.k.UI.Models;
+﻿using k.UI.Animations;
+using k.UI.Models;
 using UnityEngine;
 
-namespace Packaged.k.UI.Views
+namespace k.UI.Views
 {
     public class ViewBase : MonoBehaviour
     {

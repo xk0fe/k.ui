@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using Packaged.k.UI.Models;
-using Packaged.k.UI.Views;
+using k.UI.Models;
+using k.UI.Views;
 using UnityEngine;
 
-namespace Packaged.k.UI
+namespace k.UI
 {
     public class ViewManager
     {

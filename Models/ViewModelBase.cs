@@ -1,4 +1,4 @@
-﻿namespace Packaged.k.UI.Models
+﻿namespace k.UI.Models
 {
     public class ViewModelBase
     {

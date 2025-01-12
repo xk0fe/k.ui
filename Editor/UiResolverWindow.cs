@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
-using Packaged.k.UI.Configs;
-using Packaged.k.UI.Views;
+using k.UI.Configs;
+using k.UI.Views;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Source.Scripts.Client.UI.Editor
+namespace k.UI.Editor
 {
     public class UiResolverWindow : EditorWindow
     {

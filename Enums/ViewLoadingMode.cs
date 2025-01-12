@@ -1,4 +1,4 @@
-﻿namespace Packaged.k.UI.Enums
+﻿namespace k.UI.Enums
 {
     public enum ViewLoadingMode
     {
