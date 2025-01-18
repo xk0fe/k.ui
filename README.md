@@ -68,3 +68,11 @@ If you are too lazy to drag and drop your views into UiConfig you can use Editor
 3) Press Resolve
 
 It will add all the views that exist in the project. Even duplicates which might lead to unwated results. Do not create duplicates of the same type derived from ViewBase. Maybe later I will make it so it would at least spit out an error in case of duplicate but for now .... 
+
+
+## 🧪 Samples
+You can find samples in the Samples folder.
+### InitialConfiguration
+This sample shows how to initialize UI system and open a view.
+### ServiceConfiguration
+This one just helps me write less code. Requires k.Services package to work.

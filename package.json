@@ -1,7 +1,7 @@
 {
   "name": "com.k.ui",
   "displayName": "k.UI",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "unity": "6000.0",
   "author": {
     "name": "k0fe"
@@ -15,5 +15,20 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/xk0fe/k.ui"
-  }
+  },
+  "samples": [
+    {
+      "displayName": "Initial Configuration",
+      "description": "A basic example of how to initialize Ui system, create canvas, register views and work with them.",
+      "path": "Samples~/InitialConfiguration"
+    },
+    {
+      "displayName": "Basic Service Example",
+      "description": "This one is personal favorite. It shows how to create a service, register it and use it in views. Thanks AI for generating this description. It is really wild. Emoji 🤯",
+      "path": "Samples~/ServiceConfiguration",
+      "git-dependencies": {
+        "com.k.services": "https://github.com/xk0fe/k.services.git"
+      }
+    }
+  ]
 }

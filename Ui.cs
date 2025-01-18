@@ -12,19 +12,7 @@ namespace k.UI
         #region Singleton
         private static Ui _instance;
 
-        public static Ui Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new Ui();
-                }
-
-                return _instance;
-            }
-        }
-        
+        public static Ui Instance => _instance ??= new Ui();
 
         #endregion
         

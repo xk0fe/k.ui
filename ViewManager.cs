@@ -33,7 +33,7 @@ namespace k.UI
 #if UNITY_EDITOR
             if (_views.ContainsKey(viewName))
             {
-                UnityEngine.Debug.LogError($"Duplicate view with name {viewName} found, overwriting the old one");
+                Debug.LogError($"Duplicate view with name {viewName} found, overwriting the old one");
             }
 #endif
             _views[viewName] = view;
@@ -93,19 +93,19 @@ namespace k.UI
             view = null;
             if (!_views.TryGetValue(viewName, out var viewPrefab))
             {
-                UnityEngine.Debug.LogError($"View with name {viewName} not found");
+                Debug.LogError($"View with name {viewName} not found");
                 return false;
             }
             
             if (viewPrefab == null)
             {
-                UnityEngine.Debug.LogError($"View with name {viewName} is null");
+                Debug.LogError($"View with name {viewName} is null");
                 return false;
             }
             
             if (_viewParent == null)
             {
-                UnityEngine.Debug.LogError($"View parent is null");
+                Debug.LogError($"View parent is null");
                 return false;
             }
             

@@ -79,7 +79,7 @@ namespace k.UI.Editor
         {
             if (_config == null)
             {
-                UnityEngine.Debug.LogError("Config is null");
+                Debug.LogError("Config is null");
                 return;
             }
             var prefabs = AssetDatabase.FindAssets("t:Prefab");
