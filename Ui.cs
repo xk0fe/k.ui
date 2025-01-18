@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using k.UI.Animations;
+using k.UI.Animations.Interfaces;
 using k.UI.Configs;
 using k.UI.Enums;
 using k.UI.Models;
@@ -26,15 +28,20 @@ namespace k.UI
             _viewManager = new ViewManager(canvas.transform, viewFactory, uiConfig.ViewBases);
             _instance = this;
         }
-        
-        public static T Open<T>(ViewModelBase model = null, ViewLoadingMode loadingMode = ViewLoadingMode.Additive) where T : ViewBase {
+
+        public static T Open<T>(
+            ViewModelBase model = null,
+            ViewLoadingMode loadingMode = ViewLoadingMode.Additive,
+            ScriptableAnimationBase animation = null
+        ) where T : ViewBase
+        {
             if (loadingMode == ViewLoadingMode.Single)
             {
                 CloseAllViews();
             }
 
             var name = typeof(T).Name;
-            return Instance._viewManager.SetActiveView<T>(name, true, model);
+            return Instance._viewManager.SetActiveView<T>(name, true, model, animation);
         }
 
         public static void Close<T>() where T : ViewBase
@@ -42,11 +49,15 @@ namespace k.UI
             var name = typeof(T).Name;
             Instance._viewManager.SetActiveView(name, false);
         }
-        
-        public static T SetActive<T>(bool isActive, ViewModelBase model = null) where T : ViewBase
+
+        public static T SetActive<T>(
+            bool isActive,
+            ViewModelBase model = null,
+            IViewAnimation animation = null
+        ) where T : ViewBase
         {
             var name = typeof(T).Name;
-            return Instance._viewManager.SetActiveView<T>(name, isActive, model);
+            return Instance._viewManager.SetActiveView<T>(name, isActive, model, animation);
         }
 
         public static void SetActive(string viewName, bool isActive, ViewModelBase model = null)

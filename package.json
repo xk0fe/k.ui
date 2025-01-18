@@ -1,7 +1,7 @@
 {
   "name": "com.k.ui",
   "displayName": "k.UI",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "unity": "6000.0",
   "author": {
     "name": "k0fe"
@@ -29,6 +29,11 @@
       "git-dependencies": {
         "com.k.services": "https://github.com/xk0fe/k.services.git"
       }
+    },
+    {
+      "displayName": "Animation Example",
+      "description": "This example shows how to use ScriptableObjects to create and manage animations in Unity. It uses a central data storage system, making it easy to trigger animations from the code across different views.",
+      "path": "Samples~/AnimationExample"
     }
   ]
 }

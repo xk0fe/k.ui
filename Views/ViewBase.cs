@@ -1,4 +1,4 @@
-﻿using k.UI.Animations;
+﻿using k.UI.Animations.Interfaces;
 using k.UI.Models;
 using UnityEngine;
 
@@ -6,17 +6,13 @@ namespace k.UI.Views
 {
     public class ViewBase : MonoBehaviour
     {
-        private ViewAnimation _viewAnimation;
-        
         protected virtual void Awake()
         {
             Initialize();
-            if (TryGetComponent<ViewAnimation>(out var openAnimation)) _viewAnimation = openAnimation;
         }
 
         protected virtual void OnEnable()
         {
-            if (_viewAnimation != null) _viewAnimation.Play();
         }
 
         protected virtual void OnDisable()
@@ -31,9 +27,10 @@ namespace k.UI.Views
         {
         }
 
-        public void SetActive(bool isActive)
+        public virtual void SetActive(bool isActive, IViewAnimation viewAnimation = null)
         {
             gameObject.SetActive(isActive);
+            if (isActive && viewAnimation != null) viewAnimation.Play(transform);
         }
 
         public bool IsActive => gameObject != null && gameObject.activeSelf;

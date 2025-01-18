@@ -22,7 +22,12 @@ Make UI screens, open them and close. You can even... maybe later I will write t
 
 ## 🛠️ Installation  
 
-Just copy paste URL into your Package Manager and install it.
+To install the package, simply copy and paste the following Git URL into the Package Manager in Unity:
+```
+https://github.com/xk0fe/k.ui.git
+```
+
+This will add the package to your project, allowing you to easily access and use the k.ui package in your Unity scenes.
 
 ## 📚 Examples
 
@@ -71,8 +76,10 @@ It will add all the views that exist in the project. Even duplicates which might
 
 
 ## 🧪 Samples
-You can find samples in the Samples folder.
+You can find samples in the Samples folder. Once the package is installed, the samples are ready to use. Simply navigate to the Samples section in the Package Manager to explore and import any sample you’d like to try in your project.
 ### InitialConfiguration
-This sample shows how to initialize UI system and open a view.
+This sample shows how to initialize UI system and open a view. 
 ### ServiceConfiguration
 This one just helps me write less code. Requires k.Services package to work.
+### AnimationExample
+This example shows how to use ScriptableObjects to create and manage animations in Unity. It uses a central data storage system, making it easy to trigger animations from the code across different views.

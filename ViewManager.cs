@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using k.UI.Animations;
+using k.UI.Animations.Interfaces;
 using k.UI.Models;
 using k.UI.Views;
 using UnityEngine;
@@ -54,25 +56,33 @@ namespace k.UI
                 instance.SetActive(false);
             }
         }
-        
-        public void SetActiveView(string viewName, bool isActive, ViewModelBase model = null)
-        {
-            if (!TryGetOrCreate(viewName, out var view)) return;
-            if (model != null) view.OnViewModelUpdate(model);
-            if (isActive == view.IsActive) return;
-            view.SetActive(isActive);
-        }
-        
-        public T SetActiveView<T>(string viewName, bool isActive, ViewModelBase model) where T : ViewBase
-        {
-            if (!TryGetOrCreate(viewName, out var view)) return null;
-            if (model != null)
-            {
-                view.OnViewModelUpdate(model);
-            }
-            if (isActive == view.IsActive) return null;
-            view.SetActive(isActive);
 
+        public void SetActiveView(
+            string viewName,
+            bool isActive,
+            ViewModelBase model = null,
+            IViewAnimation animation = null)
+        {
+            SetActiveView<ViewBase>(viewName, isActive, model, animation);
+        }
+
+        public T SetActiveView<T>(
+            string viewName,
+            bool isActive,
+            ViewModelBase model = null,
+            IViewAnimation animation = null
+        ) where T : ViewBase
+        {
+            if (string.IsNullOrEmpty(viewName))
+            {
+                Debug.LogError("View name cannot be null or empty.");
+                return null;
+            }
+            
+            if (!TryGetOrCreate(viewName, out var view)) return null;
+            if (model != null) view.OnViewModelUpdate(model);
+            if (isActive == view.IsActive) return (T)view;
+            view.SetActive(isActive, animation);
             return (T)view;
         }
 
