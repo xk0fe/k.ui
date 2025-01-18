@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using k.UI.Configs;
-using k.UI.Views;
+using k.UI.Common.Configs;
+using k.UI.Common.Views;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
