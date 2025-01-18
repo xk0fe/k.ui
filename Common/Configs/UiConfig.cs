@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using k.UI.Views;
+using k.UI.Common.Views;
 using UnityEngine;
 
-namespace k.UI.Configs
+namespace k.UI.Common.Configs
 {
     [CreateAssetMenu(menuName = "k/UI/" + nameof(UiConfig), fileName = nameof(UiConfig), order = 0)]
     public class UiConfig : ScriptableObject

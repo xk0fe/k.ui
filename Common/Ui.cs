@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
-using k.UI.Animations;
-using k.UI.Animations.Interfaces;
-using k.UI.Configs;
-using k.UI.Enums;
-using k.UI.Models;
-using k.UI.Views;
+using k.UI.Common.Animations;
+using k.UI.Common.Configs;
+using k.UI.Common.Enums;
+using k.UI.Common.Implementations;
+using k.UI.Common.Interfaces;
+using k.UI.Common.Models;
+using k.UI.Common.Views;
 using UnityEngine;
 
-namespace k.UI
+namespace k.UI.Common
 {
     public class Ui
     {
@@ -19,9 +20,9 @@ namespace k.UI
         #endregion
         
         private Dictionary<string, ViewBase> _bases;
-        private ViewManager _viewManager;
+        private IViewManager _viewManager;
         
-        public void Initialize(UiConfig uiConfig, ViewFactory viewFactory)
+        public void Initialize(UiConfig uiConfig, IViewFactory viewFactory)
         {
             var canvas = Object.Instantiate(uiConfig.Canvas);
             Object.DontDestroyOnLoad(canvas);

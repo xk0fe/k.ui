@@ -1,35 +1,26 @@
 ﻿using System.Collections.Generic;
-using k.UI.Animations;
-using k.UI.Animations.Interfaces;
-using k.UI.Models;
-using k.UI.Views;
+using k.UI.Common.Interfaces;
+using k.UI.Common.Models;
+using k.UI.Common.Views;
 using UnityEngine;
 
-namespace k.UI
+namespace k.UI.Common.Implementations
 {
-    public class ViewManager
+    public class ViewManager : IViewManager
     {
         private readonly Transform _viewParent;
-        private readonly ViewFactory _viewFactory;
+        private readonly IViewFactory _viewFactory;
         private readonly Dictionary<string, ViewBase> _views = new();
         private readonly Dictionary<string, ViewBase> _viewInstances = new();
 
         
-        public ViewManager(Transform viewParent, ViewFactory viewFactory, IEnumerable<ViewBase> views = null)
+        public ViewManager(Transform viewParent, IViewFactory viewFactory, IEnumerable<ViewBase> views = null)
         {
             _viewParent = viewParent;
             _viewFactory = viewFactory;
             if (views != null) Register(views);
         }
 
-        public void Register(IEnumerable<ViewBase> views)
-        {
-            foreach (var view in views)
-            {
-                Register(view.GetType().Name, view);
-            }
-        }
-        
         public void Register(string viewName, ViewBase view)
         {
 #if UNITY_EDITOR
@@ -39,6 +30,14 @@ namespace k.UI
             }
 #endif
             _views[viewName] = view;
+        }
+
+        public void Register(IEnumerable<ViewBase> views)
+        {
+            foreach (var view in views)
+            {
+                Register(view.GetType().Name, view);
+            }
         }
 
         public void Unregister(string viewName)

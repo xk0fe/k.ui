@@ -1,4 +1,4 @@
-﻿namespace k.UI.Models
+﻿namespace k.UI.Common.Models
 {
     public class ViewModelBase
     {

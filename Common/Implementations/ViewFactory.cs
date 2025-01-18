@@ -1,9 +1,10 @@
-﻿using k.UI.Views;
+﻿using k.UI.Common.Interfaces;
+using k.UI.Common.Views;
 using UnityEngine;
 
-namespace k.UI
+namespace k.UI.Common.Implementations
 {
-    public class ViewFactory
+    public abstract class ViewFactory : IViewFactory
     {
         public virtual ViewBase CreateView(ViewBase prefab, Transform parent)
         {

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace k.UI.Animations
+namespace k.UI.Common.Animations
 {
     public class ScriptableViewAnimation<T> : ScriptableAnimationBase where T : class
     {

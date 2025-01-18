@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace k.UI.Animations.Interfaces
+namespace k.UI.Common.Interfaces
 {
     public interface IViewAnimation
     {

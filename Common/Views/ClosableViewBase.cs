@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace k.UI.Views
+namespace k.UI.Common.Views
 {
     public class ClosableViewBase : ViewBase
     {

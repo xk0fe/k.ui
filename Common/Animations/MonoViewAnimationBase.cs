@@ -1,7 +1,7 @@
-﻿using k.UI.Animations.Interfaces;
+﻿using k.UI.Common.Interfaces;
 using UnityEngine;
 
-namespace k.UI.Animations
+namespace k.UI.Common.Animations
 {
     /// <summary>
     /// TODO: remove MonoBehaviour, add ViewAnimation as optional parameter from code

@@ -1,7 +1,7 @@
-﻿using k.UI.Animations.Interfaces;
+﻿using k.UI.Common.Interfaces;
 using UnityEngine;
 
-namespace k.UI.Animations
+namespace k.UI.Common.Animations
 {
     public class ScriptableAnimationBase : ScriptableObject, IViewAnimation
     {
