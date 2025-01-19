@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace k.UI.Common.Implementations
 {
-    public abstract class ViewFactory : IViewFactory
+    public class ViewFactory : IViewFactory
     {
         public virtual ViewBase CreateView(ViewBase prefab, Transform parent)
         {

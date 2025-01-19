@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using k.Services;
-using k.UI.Configs;
-using k.UI;
+using k.UI.Common;
+using k.UI.Common.Configs;
+using k.UI.Common.Implementations;
 
 namespace k.UI.Samples.ServiceConfiguration
 {
