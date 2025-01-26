@@ -11,10 +11,12 @@ namespace k.UI.Samples.ServiceConfiguration
     {
         [SerializeField] private UiConfig _config;
 
+        private Canvas _canvas;
+        
         public override void Initialize()
         {
             base.Initialize();
-            Ui.Instance.Initialize(_config, new ViewFactory());
+            Ui.Instance.Initialize(_config, new ViewFactory(), out _canvas);
         }
     }
 }
