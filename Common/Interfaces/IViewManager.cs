@@ -2,11 +2,9 @@
 using k.UI.Common.Models;
 using k.UI.Common.Views;
 
-namespace k.UI.Common.Interfaces
-{
+namespace k.UI.Common.Interfaces {
     // todo refactor
-    public interface IViewManager
-    {
+    public interface IViewManager {
         public void Register(string viewName, ViewBase view);
         public void Register(IEnumerable<ViewBase> views);
         public void Unregister(string viewName);

@@ -1,6 +1,4 @@
-﻿namespace k.UI.Common.Models
-{
-    public class ViewModelBase
-    {
+﻿namespace k.UI.Common.Models {
+    public class ViewModelBase {
     }
 }
