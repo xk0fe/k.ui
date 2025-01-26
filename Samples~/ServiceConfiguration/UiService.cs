@@ -12,6 +12,7 @@ namespace k.UI.Samples.ServiceConfiguration
         [SerializeField] private UiConfig _config;
 
         private Canvas _canvas;
+        public Canvas Canvas => _canvas;
         
         public override void Initialize()
         {
