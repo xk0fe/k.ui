@@ -16,8 +16,23 @@ namespace k.UI.Common {
         private Dictionary<string, ViewBase> _bases;
         private IViewManager _viewManager;
 
-        public void Initialize(UiConfig uiConfig, IViewFactory viewFactory) {
-            var canvas = Object.Instantiate(uiConfig.Canvas);
+        public void Initialize(UiConfig uiConfig, IViewFactory viewFactory, out Canvas canvas) {
+            canvas = null;
+            if (uiConfig == null) {
+                Debug.LogError($"{nameof(uiConfig)} is null");
+                return;
+            }
+            
+            if (uiConfig.Canvas == null) {
+                Debug.LogError($"{nameof(uiConfig.Canvas)} is null");
+                return;
+            }
+            
+            if (viewFactory == null) {
+                Debug.LogError($"{nameof(IViewFactory)} is null");
+                return;
+            }
+            canvas = Object.Instantiate(uiConfig.Canvas);
             Object.DontDestroyOnLoad(canvas);
             _viewManager = new ViewManager(canvas.transform, viewFactory, uiConfig.ViewBases);
             _instance = this;
